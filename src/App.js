@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.sass';
+import { PhotoList } from './components/PhotoList/PhotoList';
+import { Header } from './components/Header/Header';
 
 function App() {
+  const [grid, setGrid] = useState(3);
+  const updateData = (grid) => setGrid(grid);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header
+        updateData={updateData}
+      />
+      <PhotoList 
+        grid={grid}
+      />
     </div>
+
   );
 }
 

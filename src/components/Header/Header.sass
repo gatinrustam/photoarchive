@@ -1,0 +1,58 @@
+.header
+  width: 100%
+  padding: 15px
+  margin-bottom: 6px
+  background-color: #2c3038
+  border-radius: 0 0 6px 6px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.title
+  display: flex
+  flex-wrap: wrap
+
+  &__logo
+    width: 100%
+    font-size: 3em
+    font-weight: 700
+
+  &__span
+    width: 100%
+
+.menu
+  display: flex
+
+  &__grid
+    display: flex
+
+  &__grid,
+  &__expand
+    margin-left: 15px
+
+  &__grid-image
+    padding: 5px
+    margin: 0 4px
+    border: 2px solid #37414e
+    border-radius: 6px
+    cursor: pointer
+    transition: all .2s ease-in-out
+
+  &__grid-image:hover
+    transition: all .2s ease-in-out
+    border: 2px solid #303944
+
+@media (max-width: 600px)
+  .header
+    flex-wrap: wrap
+
+  .title
+    margin-bottom: 15px
+
+  .menu
+    display: flex
+
+    &__grid,
+    &__expand
+      margin-right: 15px
+      margin-left: 0

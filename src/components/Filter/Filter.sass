@@ -1,0 +1,53 @@
+$bgColor: black
+$blueBgColor: #0099ff
+$purpleBgColor: #3f51b5
+$orangeBgColor: #ff9800
+$textColor: #ffffff
+$darkTextColor: #757575
+
+.filter
+  margin: 15px 10px
+  transition: all .5s ease
+  // display: flex
+
+  &__year,
+  &__name,
+  &__city,
+  &__type,
+  &__more 
+    display: inline-block
+    margin-bottom: 10px
+
+    &.expand
+      display: block
+
+  &__item
+    padding: 6px 20px
+    font-size: 1em
+    border-radius: 2em
+    margin-left: 5px
+    cursor: pointer
+    display: inline-block
+
+    &.year
+      background-color: $purpleBgColor
+      color: #a5b2ff
+
+    &.city
+      background-color: #4caf50
+      color: #c5ffc7
+
+    &.name
+      background-color: $blueBgColor
+      color: #c4e8ff
+
+    &.type
+      background-color: $orangeBgColor
+      color: #fff6e9
+
+    &.more
+      color: $darkTextColor
+
+
+.range input
+  width: 100%
